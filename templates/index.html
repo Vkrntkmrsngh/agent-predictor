@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			width:962px;
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">Project Name</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li class="active"><a href="#">Page 1</a></li>
+		  <li><a href="#">Page 2</a></li>
+		  <li><a href="#">Page 3</a></li>
+		  <li><a href="#">Page 4</a></li>
+		</ul>
+	  </div>
+	</nav>
+	
+	
+	<div class="container main">
+  <div class="jumbotron" id="holder">
+    <h1 class='main_heading'>Agent Predictor Bot</h1>
+    <h3>You can use this bot to predict weather an agent is going to leave the organizantion or not!!</h3>
+    <br>
+    <div class="instructions">
+      <h2>Instructions: </h2>
+      <p>1. Please Provide all required fields below and click on Predict.</p>
+    </div>
+    <br>
+    <br>
+    <form action="/predict" method="post" enctype="multipart/form-data" class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2">National Producer Number:</label>
+        <div class="col-sm-10">
+          <input  type="Number" class="form-control" name="national_producer_number" placeholder=" Enter National Producer Number" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Age:</label>
+        <div class="col-sm-10">
+          <input type="Number" class="form-control" name="age" placeholder=" Enter Age" >
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Salary:</label>
+        <div class="col-sm-10">
+          <input  type="Number" class="form-control" name="salary" placeholder=" Enter Salary" >
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Length Of Service:</label>
+        <div class="col-sm-10">
+          <input  type="Number" class="form-control" name="los" placeholder=" Enter Length Of Service" >
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Mailing State:</label>
+        <div class="col-sm-10">
+          <input  type="text" class="form-control" name="mailing_state" placeholder=" Enter Mailing State" >
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Gender:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="gender" value="Yes" checked>Yes
+			<input type="radio" name="gender" value="No"> No<br>
+			<!--input  type="text" class="form-control" name="gender" placeholder=" Enter Gender" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Martial Status:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="maratial_status" value="Yes" checked>Yes
+			<input type="radio" name="maratial_status" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="maratial_status" placeholder=" Enter Martial Status" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Resident:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="resident" value="Yes" checked>Yes
+			<input type="radio" name="resident" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="resident" placeholder=" Enter Resident" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Crop:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="crop" value="Yes" checked>Yes
+			<input type="radio" name="crop" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="crop" placeholder=" Enter Crop" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Surety:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="surety" value="Yes" checked>Yes
+			<input type="radio" name="surety" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="surety" placeholder=" Enter Surety" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Accident And Health:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="accident_and_health" value="Yes" checked>Yes
+			<input type="radio" name="accident_and_health" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="accident_and_health" placeholder=" Enter Accident And Health" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Life:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="life" value="Yes" checked>Yes
+			<input type="radio" name="life" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="life" placeholder=" Enter Life" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Variable Life Variable Annuity:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="variable_life_variable_annuity" value="Yes" checked>Yes
+			<input type="radio" name="variable_life_variable_annuity" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="variable_life_variable_annuity" placeholder=" Enter Variable Life Variable Annuity" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Personal Lines:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="personal_lines" value="Yes" checked>Yes
+			<input type="radio" name="personal_lines" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="personal_lines" placeholder=" Enter Personal Lines" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Credit:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="credit" value="Yes" checked>Yes
+			<input type="radio" name="credit" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="credit" placeholder=" Enter Credit" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Excess And Surplus Lines:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="excess_and_surplus_lines" value="Yes" checked>Yes
+			<input type="radio" name="excess_and_surplus_lines" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="excess_and_surplus_lines" placeholder=" Enter Excess And Surplus Lines" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Property:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="property1" value="Yes" checked>Yes
+			<input type="radio" name="property1" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="property1" placeholder=" Enter Property"-->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Casualty:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="casualty" value="Yes" checked>Yes
+			<input type="radio" name="casualty" value="No"> No<br>
+          <!--input  type="number" class="form-control" name="casualty" placeholder=" Enter Casualty" -->
+        </div>
+      </div>
+	  <div class="form-group">
+        <label class="control-label col-sm-2" >Resiprocal Authority:</label>
+        <div class="col-sm-10">
+			<input type="radio" name="resiprocal_authority" value="Yes" checked>Yes
+			<input type="radio" name="resiprocal_authority" value="No"> No<br>
+			<!--input  type="number" class="form-control" name="resiprocal_authority" placeholder=" Enter Resiprocal Authority" -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <!--button type="submit" id="submit" class="button btn btn-default">Predict</button-->
+		  <input type="submit" value="Predict" class="button btn btn-default"> {% if label %} {{ label }} {% endif %}
+        </div>
+      </div>
+    </form>
+    <h2 class="result"></h2>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <div class="footer-copyright text-center py-3">
+    <div class="bottom">
+      <p><a href="#">Cognizant | Customer status Predictor</a></p>
+    </div>
+  </div>
+
+</footer>
+<!-- Footer -->
+	
+	</div>
+</body>
+</html>
